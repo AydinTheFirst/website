@@ -13,6 +13,33 @@ import { useIntlayer } from "react-intlayer";
 
 import { SITE_CONFIG, SKILLS, SOCIAL_LINKS } from "~/constants";
 
+import type { Route } from "./+types/page";
+
+export const meta: Route.MetaFunction = () => {
+  return [
+    { title: "About - Halil Aydın" },
+    {
+      content:
+        "Learn more about Halil Aydın, a passionate Full-Stack Developer specializing in modern web technologies including React, TypeScript, Node.js, and cloud solutions.",
+      name: "description"
+    },
+    {
+      content:
+        "about halil aydın, full-stack developer, react developer, typescript, nodejs, web development, portfolio",
+      name: "keywords"
+    },
+    { content: "Halil Aydın", name: "author" },
+    { content: "About - Halil Aydın", property: "og:title" },
+    {
+      content:
+        "Learn more about Halil Aydın, a passionate Full-Stack Developer specializing in modern web technologies.",
+      property: "og:description"
+    },
+    { content: "profile", property: "og:type" },
+    { content: "summary", name: "twitter:card" }
+  ];
+};
+
 export default function AboutPage() {
   const content = useIntlayer("about");
 

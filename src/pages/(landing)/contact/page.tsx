@@ -6,6 +6,33 @@ import { useIntlayer } from "react-intlayer";
 
 import { SITE_CONFIG, SOCIAL_LINKS } from "~/constants";
 
+import type { Route } from "./+types/page";
+
+export const meta: Route.MetaFunction = () => {
+  return [
+    { title: "Contact - Halil Aydın" },
+    {
+      content:
+        "Get in touch with Halil Aydın for web development projects, collaborations, or freelance opportunities. Available for React, TypeScript, and Node.js development.",
+      name: "description"
+    },
+    {
+      content:
+        "contact, halil aydın, get in touch, web development, freelance, react developer, typescript developer",
+      name: "keywords"
+    },
+    { content: "Halil Aydın", name: "author" },
+    { content: "Contact - Halil Aydın", property: "og:title" },
+    {
+      content:
+        "Get in touch with Halil Aydın for web development projects and collaborations.",
+      property: "og:description"
+    },
+    { content: "website", property: "og:type" },
+    { content: "summary", name: "twitter:card" }
+  ];
+};
+
 export default function ContactPage() {
   const content = useIntlayer("contact-page");
 

@@ -3,6 +3,33 @@ import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { useIntlayer } from "react-intlayer";
 
+import type { Route } from "./+types/page";
+
+export const meta: Route.MetaFunction = () => {
+  return [
+    { title: "Projects - Halil Aydın" },
+    {
+      content:
+        "Explore the portfolio of web development projects by Halil Aydın, including React applications, Node.js backends, and modern web solutions.",
+      name: "description"
+    },
+    {
+      content:
+        "projects, portfolio, web development, react projects, nodejs projects, halil aydın projects",
+      name: "keywords"
+    },
+    { content: "Halil Aydın", name: "author" },
+    { content: "Projects - Halil Aydın", property: "og:title" },
+    {
+      content:
+        "Explore the portfolio of web development projects by Halil Aydın.",
+      property: "og:description"
+    },
+    { content: "website", property: "og:type" },
+    { content: "summary", name: "twitter:card" }
+  ];
+};
+
 const projectsData = [
   {
     description:
