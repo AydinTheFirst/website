@@ -1,4 +1,4 @@
-import { Button } from "@heroui/react";
+import { Button, Link } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { useIntlayer } from "react-intlayer";
@@ -77,21 +77,7 @@ export default function Hero() {
           transition={{ delay: 1.0, duration: 0.8 }}
         >
           <Button
-            as='a'
-            className='min-w-[200px]'
-            color='primary'
-            href='/resume.pdf'
-            radius='full'
-            size='lg'
-            startContent={<Icon icon='lucide:download' />}
-            target='_blank'
-            variant='solid'
-          >
-            {content.resumeButton}
-          </Button>
-
-          <Button
-            as='a'
+            as={Link}
             className='min-w-[200px]'
             color='primary'
             href='/contact'

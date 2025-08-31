@@ -58,7 +58,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, x: -30 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <Card className='sticky top-8'>
+            <Card className='sticky top-20'>
               <CardBody className='p-8 text-center'>
                 <Avatar
                   className='mx-auto mb-6 h-32 w-32'
