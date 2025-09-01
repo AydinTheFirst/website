@@ -3,7 +3,10 @@ import { Icon } from "@iconify/react";
 import { isRouteErrorResponse, useRouteError } from "react-router";
 
 export function ErrorBoundary() {
-  const error = useRouteError();
+  const error = useRouteError() as
+    | { status?: number; statusText?: string }
+    | Error
+    | null;
 
   let is404 = false;
   let title = "Oops! Something went wrong";
@@ -48,8 +51,12 @@ export function ErrorBoundary() {
           <h1 className='text-foreground text-4xl font-bold'>
             {is404 ? "404" : "Oops!"}
           </h1>
-          <h2 className='text-foreground/80 text-2xl font-semibold'>{title}</h2>
-          <p className='text-default-600 leading-relaxed'>{description}</p>
+          <h2 className='text-foreground/80 text-2xl font-semibold'>
+            {String(title)}
+          </h2>
+          <p className='text-default-600 leading-relaxed'>
+            {String(description)}
+          </p>
         </div>
 
         {/* Action Buttons */}

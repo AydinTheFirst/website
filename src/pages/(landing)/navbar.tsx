@@ -12,6 +12,7 @@ import React from "react";
 import { useIntlayer } from "react-intlayer";
 
 import LocaleSwitcher from "~/components/locale-switcher";
+import Logo from "~/components/logo";
 import { ThemeSwitcher } from "~/components/theme-switcher";
 import { SITE_CONFIG } from "~/constants";
 
@@ -45,8 +46,13 @@ export default function Navbar() {
           aria-label='Toggle Menu'
           className='sm:hidden'
         />
-        <NavbarBrand className='font-bold text-inherit'>
-          {SITE_CONFIG.name}
+        <NavbarBrand
+          as={Link}
+          className='font-bold text-inherit'
+          href='/'
+        >
+          <Logo />
+          <span className='ms-2'>{SITE_CONFIG.name}</span>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent

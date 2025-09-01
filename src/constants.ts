@@ -57,38 +57,39 @@ export const NAVIGATION_LINKS = [
 export const SKILLS = [
   {
     icon: "logos:react",
-    level: 95,
     name: "React"
   },
   {
     icon: "logos:typescript-icon",
-    level: 90,
     name: "TypeScript"
   },
   {
     icon: "logos:nodejs-icon",
-    level: 85,
     name: "Node.js"
   },
   {
     icon: "logos:nestjs",
-    level: 90,
     name: "Nest.js"
   },
   {
     icon: "logos:tailwindcss-icon",
-    level: 95,
     name: "TailwindCSS"
   },
   {
     icon: "logos:postgresql",
-    level: 80,
     name: "PostgreSQL"
   },
   {
     icon: "logos:flutter",
-    level: 80,
     name: "Flutter"
+  },
+  {
+    icon: "logos:docker-icon",
+    name: "Docker"
+  },
+  {
+    icon: "logos:aws",
+    name: "AWS"
   }
 ] as const;
 

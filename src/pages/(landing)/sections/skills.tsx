@@ -41,20 +41,6 @@ export default function SkillsSection() {
                     icon={skill.icon}
                   />
                   <h3 className='mb-2 text-lg font-semibold'>{skill.name}</h3>
-                  <div className='w-full'>
-                    <div className='mb-2 flex justify-between text-sm'>
-                      <span>{skillsContent.proficiency}</span>
-                      <span>{skill.level}%</span>
-                    </div>
-                    <div className='bg-default-200 h-2 w-full rounded-full'>
-                      <motion.div
-                        animate={{ width: `${skill.level}%` }}
-                        className='bg-primary h-full rounded-full'
-                        initial={{ width: 0 }}
-                        transition={{ delay: 0.5 + 0.1 * index, duration: 1 }}
-                      />
-                    </div>
-                  </div>
                 </CardBody>
               </Card>
             </motion.div>

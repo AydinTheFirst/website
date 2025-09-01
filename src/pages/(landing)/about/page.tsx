@@ -42,7 +42,6 @@ export const meta: Route.MetaFunction = () => {
 
 export default function AboutPage() {
   const content = useIntlayer("about");
-
   const technologies = [
     "HTML5",
     "CSS3",
@@ -153,17 +152,6 @@ export default function AboutPage() {
                           icon={skill.icon}
                         />
                         <span className='font-medium'>{skill.name}</span>
-                      </div>
-                      <div className='bg-default-200 h-2 w-full rounded-full'>
-                        <motion.div
-                          animate={{ width: `${skill.level}%` }}
-                          className='bg-primary h-2 rounded-full'
-                          initial={{ width: 0 }}
-                          transition={{ delay: 0.5 + 0.1 * index, duration: 1 }}
-                        />
-                      </div>
-                      <div className='text-default-500 text-right text-sm'>
-                        {skill.level}%
                       </div>
                     </motion.div>
                   ))}
