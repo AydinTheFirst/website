@@ -1,4 +1,4 @@
-import { HeroUIProvider } from "@heroui/react";
+import { HeroUIProvider, ToastProvider } from "@heroui/react";
 import { ThemeProvider } from "next-themes";
 import { Outlet } from "react-router";
 
@@ -17,6 +17,7 @@ export default function RootLayout() {
   return (
     <Providers>
       <Outlet />
+      <ToastProvider />
     </Providers>
   );
 }
