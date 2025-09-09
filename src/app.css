@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+.text-muted {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+.container {
+  @apply mx-auto max-w-7xl p-4;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+}
