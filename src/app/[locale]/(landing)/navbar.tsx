@@ -29,10 +29,10 @@ export default function NavbarComponent() {
 
   React.useEffect(() => {
     setIsMenuOpen(false);
-  }, [pathname]);
+  }, [pathname, setIsMenuOpen]);
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
