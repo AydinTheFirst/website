@@ -32,7 +32,7 @@ export default function NavbarComponent() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
+        <NavbarBrand as={LocaleLink} className="text-foreground" href="/">
           <p className="font-bold text-inherit">Halil Aydın</p>
         </NavbarBrand>
       </NavbarContent>
