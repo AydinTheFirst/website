@@ -9,6 +9,7 @@ import {
 } from "@heroui/react";
 import React from "react";
 import { useIntlayer } from "react-intlayer";
+import { useLocation } from "react-router";
 
 import LocaleLink from "~/components/locale-link";
 import LocaleSwitcher from "~/components/locale-switcher";
@@ -17,6 +18,7 @@ import ThemeSwitcher from "~/components/theme-switcher";
 export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const content = useIntlayer("navbar");
+  const { pathname } = useLocation();
 
   const menuItems = [
     { href: "/", label: content.items.home },
@@ -24,6 +26,10 @@ export default function NavbarComponent() {
     { href: "/projects", label: content.items.projects },
     { href: "/contact", label: content.items.contact },
   ];
+
+  React.useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
